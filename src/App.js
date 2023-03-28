@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home";
+import Header from "./components/header";
 
-function App() {
+import Purecomp from "./components/purecomp";
+import Purecompf from "./components/purecompf";
+import Adjel from "./components/adjel";
+import Profile from "./components/profile";
+import User from "./components/User";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <div className="container">
+        <Routes>
+          <Route path="/user" element={<User />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/adjel" element={<Adjel />} />
+          <Route path="/purecompf" element={<Purecompf />} />
+          <Route path="/purecomp" element={<Purecomp />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
