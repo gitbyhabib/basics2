@@ -8,6 +8,11 @@ import Purecompf from "./components/purecompf";
 import Adjel from "./components/adjel";
 import Profile from "./components/profile";
 import User from "./components/User";
+import Transitioncomp from "./Transition/Transition";
+
+import './style/style.css'
+import Csstransition from "./Transition/Csstransition";
+import Tgroup from "./Transition/Tgroup";
 
 const App = () => {
   return (
@@ -15,6 +20,9 @@ const App = () => {
       <Header />
       <div className="container">
         <Routes>
+        <Route path="/tgroup" element={<Tgroup />} />
+          <Route path="/csstransition" element={<Csstransition />} />
+          <Route path="/transition" element={<Transitioncomp />} />
           <Route path="/user" element={<User />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/adjel" element={<Adjel />} />

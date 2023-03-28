@@ -31,7 +31,17 @@ const Header = () => {
             User
           </NavLink>{" "}
           -
-        </nav>
+          <NavLink className="p-2" to="/transition">
+            Transition
+          </NavLink>{" "}-
+          <NavLink className="p-2" to="/csstransition">
+            Css Transition
+          </NavLink>{" "}- 
+          <NavLink className="p-2" to="/tgroup">
+            Transition Group 
+          </NavLink>{" "}
+          
+          </nav>
       </div>
     </header>
   );
